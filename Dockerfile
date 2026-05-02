@@ -11,7 +11,6 @@ RUN npm run build
 # Step 2: Serve
 FROM nginx:alpine
 
-# ✅ FIX: build → dist
 COPY --from=build /app/dist /usr/share/nginx/html
 
 EXPOSE 80
